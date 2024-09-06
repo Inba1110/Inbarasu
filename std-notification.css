@@ -1,0 +1,53 @@
+
+.std-notication{
+    background-color: white;
+    border-radius: 20px;
+}
+.std-notication .title-heading{
+    border-bottom: 1px solid black;
+
+}
+
+.notification-body {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.notification-body .time{
+    border-right: 2px solid bisque;
+    padding-top: 5px;
+}
+.notification-body .time p span{
+    display: none;
+}
+.notification-body .message h4{
+    color: rgb(103, 101, 97);
+}
+.notification-body .message p{
+    color: rgb(143, 143, 143);
+}
+@media (max-width:992px){
+    .notification-body{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .notification-body .time{
+        display: flex;
+        flex-direction: row;
+        border-right: 2px solid bisque;
+        padding:10px !important;
+        
+
+    }
+    .notification-body .time p span{
+        font-weight: 500;
+        display: block;
+    }
+    .notification-body  .message{
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+}

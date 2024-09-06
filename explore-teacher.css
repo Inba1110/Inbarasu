@@ -1,0 +1,230 @@
+body{
+    background-color: #EBEFFE !important;
+}
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.std-nav a{
+    border-left:0.5px solid rgb(68, 66, 66) ;
+    border-right:0.5px solid rgb(68, 66, 66) ;
+    padding: 0px;
+    min-width: 50px;
+    }
+    .fa-circle-user{
+        font-size: 30px;
+        position: relative;
+        padding: 10px;
+        
+        }
+        .fa-circle-user:hover{
+        color: orangered;
+        }
+        
+        .fa-arrow-right-from-bracket{
+         font-size: 30px;
+        position: relative;
+        padding: 10px;
+        
+        
+        }
+        .fa-arrow-right-from-bracket:hover{
+        color: orangered;
+        }
+        .fa-bell{
+           font-size: 30px;
+           position: relative;
+           padding: 10px;
+           
+        }
+        .fa-bell:hover{
+        color: orangered;
+        }
+
+/* dashboard body */
+    
+.dashboard.content {
+    margin-top: 60px;
+    background-color: #EBEFFE;
+    margin-left: 200px;
+    /* Width of sidebar */
+    padding: 20px;
+    height: fit-content;
+  }
+        /* end */
+
+        /* side bar start------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    top: 60px; /* Height of navbar */
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color:  #1b478c;
+    padding: 20px;
+    z-index: 1000;
+}
+
+
+.sidebar a{
+color: white;
+font-size: 20px;
+/* border: 1px solid white; */
+margin: 0px 0px 20px 0px;
+
+}
+.sidebar a:hover{
+background-color: orangered;
+color: white;
+border: none;
+}
+.db-logos{
+margin: 10px;
+font-size: 20px;
+padding-left: 5px;
+}
+
+/* side bar end-------------------------------- */
+
+        
+
+
+
+
+
+
+/* nav end */
+
+
+.explore-body{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px !important;
+    border-radius: 10px;
+    
+}
+
+.your-teacher-box{
+    background-color: white;
+}
+.teacher-panel {
+  border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.about-teacher
+.teacher-panel-details{
+    display: flex;
+    flex-direction: row;
+   
+    border-top: 2px solid rgb(220, 211, 211);
+    
+}
+
+.teacher-panel-details .col-lg-6{
+    border-right:1px solid rgb(130, 120, 120) ; ;
+}
+.teacher-panel-details .col-lg-4{
+    margin-bottom: 4px;
+    border-right:1px solid rgb(130, 120, 120) ; ;
+}
+  .enroll-btn{
+    background-color: orangered;
+    color: white;
+   
+
+}
+.enroll-btn:hover{
+    border: 1px solid orangered;
+    background-color: white;
+    color: orangered;
+}
+.demo-class-btn{
+    background-color: #102C58 ;
+    color: white;
+}
+.demo-class-btn:hover{
+    border: 1px solid  #102C58;
+    background-color: white;
+    color: #102C58;
+
+}
+@media (max-width: 770px) {
+    .sidebar {
+      position: fixed;
+      width: 80px;
+      height: 100vh;
+      left: auto;
+      background-color: #1b478c;
+    }
+    .sidebar .navbar-nav a {
+      font-size: 0;
+    }
+    .sidebar .navbar-nav a i {
+      font-size: 30px;
+      margin: 0;
+    }
+    .sidebar .navbar-nav   .fa-sharp-duotone{
+        margin-left: 20px;
+    }
+    .dashboard.content {
+      overflow-x: hidden;
+      margin-left: 80px;
+      padding: 10px;
+    }}
+
+    @media (max-width: 479px) {
+        .header-text{
+          
+            padding:2px !important;
+            margin-left: 0px;
+      
+        }
+        .header-text h4{
+            font-size: 0.9rem;
+            font-weight: 500;
+           
+        }
+        .header-text p{
+            font-size: 0.9rem;
+            font-weight: 500;
+        
+        }
+        .teacher-panel-header i{
+           font-size: 50px !important;
+          
+        }
+        .teacher-panel .teacher-panel-details h6  , p{
+        font-weight: 500;
+          font-size: 0.81rem;
+        }
+
+        .teacher-panel .teacher-panel-details .enroll-btn{
+                font-size: 0.8rem;
+        }   
+        .teacher-panel .teacher-panel-details .demo-class-btn{
+            font-size: 0.8rem;
+        }
+        .sidebar {
+            position: fixed;
+            width: 80px;
+            height: 80vh;
+            left: auto;
+            background-color: #1b478c;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+          }
+          .sidebar .navbar-nav a {
+            font-size: 0;
+          }
+          .sidebar .navbar-nav a i {
+            font-size: 30px;
+            margin: 0;
+          }
+          .sidebar .navbar-nav   .fa-sharp-duotone{
+              margin-left: 20px;
+          }
+      }

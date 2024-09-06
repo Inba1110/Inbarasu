@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <!-- <link rel="stylesheet" th:href="@{/css/register.css}"> -->
+  <!-- <link rel="stylesheet" th:href="@{/css/std-login.css}"> -->
+  
+  <link rel="stylesheet" th:href="@{/css/register.css}">
+  
+  
+  <!-- <link rel="stylesheet" th:href="@{/css/style.css?v=1.0}">
+  <link rel="stylesheet" th:href="@{/css/std-login.css}"> -->
+  
+  
+  
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css">
+  <!-- font aweasom -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- teachesrs about -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- student review -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+<style>
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+ .alert-info{
+  background-color: rgb(195, 224, 195);
+  padding: 10px;
+}
+.form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+ 
+  <section class="container">
+    <header>Registration Form</header>
+    <div th:if="${param.success}">
+      <div class="alert alert-info">
+          You have successfully registered our app!
+      </div>
+  </div>
+    <form 
+    method="post"
+    role="form"
+    th:action="@{/register/save}"
+    th:object="${user}"
+    class="form"
+    >
+      <div class="input-box col-lg-12 p-0 ">
+          <div class="col-lg-6 p-0"><label>First Name</label>
+              <input 
+              class="form-control"
+              id="firstName"
+              name="firstName"
+              placeholder="Enter first name"
+              th:field="*{firstName}"
+              type="text" />
+              <p th:errors = "*{firstName}" class="text-danger"
+              th:if="${#fields.hasErrors('firstName')}"></p>
+          </div>
+          <div class="col-lg-6 ">   
+                 <label>Last Name</label>
+              <input 
+              class="form-control"
+              id="lastName"
+              name="lastName"
+              placeholder="Enter last name"
+              th:field="*{lastName}"
+              type="text" />
+              <p th:errors = "*{lastName}" class="text-danger"
+              th:if="${#fields.hasErrors('lastName')}"></p>
+          </div>
+        
+  
+      </div>
+
+      <div class="input-box">
+        <label>Email Address</label>
+        <input  
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email address"
+        th:field="*{email}"
+        type="email" 
+        />
+        <p th:errors = "*{email}" class="text-danger"
+        th:if="${#fields.hasErrors('email')}"></p>
+      </div>
+
+      <div class="column">
+        <div class="input-box">
+          <label>Mobile Number</label>
+          <input  class="form-control"
+          id="mobile"
+          name="mobile"
+          placeholder="Enter Your Mobile Number"
+          th:field="*{mobile}"
+          type="text"
+          /> 
+          <p th:errors = "*{mobile}" class="text-danger"
+          th:if="${#fields.hasErrors('mobile')}"></p>
+        </div>
+        <div class="input-box">
+          <label>Birth Date</label>
+          <input   
+         
+         class="form-control"
+         id="date"
+         name="date"
+         th:field="*{date}"
+         type="text" placeholder="DD / MM / YYYY" required />
+         <p th:errors = "*{date}" class="text-danger"
+              th:if="${#fields.hasErrors('date')}"></p>
+        </div>
+      </div>
+      <div class="input-box col-lg-12 p-0 ">
+          <div class="col-lg-6 p-0"><label>Gender</label>
+              <input 
+               placeholder="Male / Female / Others" 
+              class="form-control"
+              id="gender"
+              name="gender"
+              th:field="*{gender}"
+              type="text"/>
+              <p th:errors = "*{gender}" class="text-danger"
+              th:if="${#fields.hasErrors('gender')}"></p>
+          </div>
+          <div class="col-lg-6 ">   
+                 <label>Occupation</label>
+              <input 
+              class="form-control"
+              id="occupation"
+              name="occupation"
+              placeholder="School / College / Others"
+              th:field="*{occupation}"
+              type="text" />
+              <p th:errors = "*{occupation}" class="text-danger"
+              th:if="${#fields.hasErrors('occupation')}"></p></div>
+        
+  
+      </div>
+      <div class="input-box col-lg-12 p-0 ">
+          <div class="col-lg-6 p-0"><label>Password</label>
+              <input 
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Enter Your password"
+              th:field="*{password}"
+              type="password"/>
+              <p th:errors = "*{password}" class="text-danger"
+                     th:if="${#fields.hasErrors('password')}"></p>
+          </div>
+              </div>
+     
+              <div class="form-group col-lg-12">
+                  <button class="btn  btn-register m-2 col-lg-12 " type="submit" >Register</button>
+                  
+                  <a th:href="@{/login}" class="col-lg-12 text-center" style="color: blue;"> Already Registerd? Login here</a>
+            
+              </div>
+<!--  <a th:href="@{/login}"  >Login here</a>-->
+            </form>
+  </section>
+
+   <!-- Optional JavaScript -->
+  <script src="./script.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
+
+

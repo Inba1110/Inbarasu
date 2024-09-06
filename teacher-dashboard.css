@@ -1,0 +1,133 @@
+.explore-body{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px !important;
+    border-radius: 10px;
+    
+}
+.teacher-panel{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.about-teacher-details{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 20px;
+    background-color: white;
+}
+.about-teacher-details h5{
+    background-color: rgb(223, 223, 220);
+    border-radius: 5px;
+    padding: 5px;
+}
+.about-teacher-details p{
+    color:rgb(82, 81, 81);
+}
+.classes{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 10px;
+    background-color: white;
+}
+.classes .class-details{
+    padding: 10px;
+    border: 1px solid orangered;
+    background-color: bisque;
+}
+.classes .class-details h6{
+    color: orangered;
+
+}
+.classes .class-details p{
+    color: rgb(82, 81, 81);
+}
+.teacher-panel-details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 2px solid rgb(220, 211, 211);
+    
+}
+.teacher-review{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 10px;
+    background-color: white;
+}
+.teacher-panel-details .col-lg-6{
+    border-right:1px solid rgb(130, 120, 120) ; ;
+}
+.teacher-panel-details .col-lg-4{
+    margin-bottom: 4px;
+    border-right:1px solid rgb(130, 120, 120) ; ;
+}
+  .enroll-btn{
+    background-color: orangered;
+    color: white;
+   
+
+}
+.enroll-btn:hover{
+    border: 1px solid orangered;
+    background-color: white;
+    color: orangered;
+}
+.demo-class-btn{
+    background-color: #102C58 ;
+    color: white;
+}
+.demo-class-btn:hover{
+    border: 1px solid  #102C58;
+    background-color: white;
+    color: #102C58;
+
+}
+
+
+
+/* recommended teachers */
+/* teacher-box */
+.your-teacher-box{
+
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.your-teacher-box .sub-title-heading{
+    border-bottom: 1px  solid#1414131a;
+
+}
+.your-teacher-box .teacher-panel{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.teacher-panel .teacher-panel-header{
+    display: flex;
+    flex-direction: row;
+}
+.teacher-panel-body {
+    display: flex;
+    flex-direction: column;
+}
+.teacher-panel-body ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.teacher-panel-body #course-price{
+    color: #ff5e14;
+    background-color: #FF5E141A ;
+    border-left: 1px solid ;
+    padding-left: 5px;
+    width: 50%;
+    font-size: 0.9rem;
+}
+@media (max-width:768px) {
+    .payment-modal{
+      width:50% ;
+      height: 50%;
+      
+    }
+}

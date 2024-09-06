@@ -1,0 +1,33 @@
+.login-form-box
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 70px;
+    background-image: url('..//images/login-img/large-triangles.svg');
+    border-radius: 20px;
+    
+    
+}
+form .login-btn{
+    background-color: orangered;
+    color: white;
+
+} 
+form .login-btn:hover{
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+}
+@media  (max-width:992px) {
+    .login-form-box{
+        font-size: 1rem;
+    }
+    
+}
+
+
+
+
+
+

@@ -1,0 +1,533 @@
+/* nav bar start -------------------------------------------------*/
+
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+/*  */
+.std-nav a{
+border-left:0.5px solid rgb(68, 66, 66) ;
+border-right:0.5px solid rgb(68, 66, 66) ;
+padding: 0px;
+min-width: 50px;
+}
+.fa-circle-user{
+font-size: 30px;
+position: relative;
+padding: 10px;
+
+}
+.fa-circle-user:hover{
+color: orangered;
+}
+
+.fa-arrow-right-from-bracket{
+ font-size: 30px;
+position: relative;
+padding: 10px;
+
+
+}
+.fa-arrow-right-from-bracket:hover{
+color: orangered;
+}
+.fa-bell{
+   font-size: 30px;
+   position: relative;
+   padding: 10px;
+   
+}
+.fa-bell:hover{
+color: orangered;
+}
+/* nvbar end-------------------------------------------------------- */
+
+/* @media (max-width:768px){ 
+    .card-body .db-card-title{
+        font-size: 1rem;
+    }
+    .db-card-body .db-card-text h4{
+        font-size: 1rem;
+    }
+    
+}
+
+
+/*  */
+
+/*  added */
+.cloned-column-style {
+             
+    border-radius: 10px;
+   
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+}
+
+       .remove-btn{
+        width: 30%;
+       }
+       .add-items{
+       
+        margin:10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,;
+       }
+/* added */
+
+
+
+/* side bar start------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    top: 60px; /* Height of navbar */
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color:  #1b478c;
+    padding: 20px;
+    z-index: 1000;
+}
+
+
+.sidebar a{
+color: white;
+font-size: 20px;
+/* border: 1px solid white; */
+margin: 0px 0px 20px 0px;
+
+}
+.sidebar a:hover{
+background-color: orangered;
+color: white;
+border: none;
+}
+.db-logos{
+margin: 10px;
+font-size: 20px;
+padding-left: 5px;
+}
+
+/* side bar end-------------------------------- */
+
+ 
+/* dashboard body */
+    
+.dashboard.content {
+    margin-top: 60px;
+    background-color: #EBEFFE;
+    margin-left: 200px;
+    /* Width of sidebar */
+    padding: 20px;
+  }
+.first-row{
+    display: flex;
+    
+}
+
+.db-card-body{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+   
+}
+.db-card-title{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+   /* margin-top: 15px;  <i _ngcontent-paq-c86="" class="fa fa-user fa-fw"></i>       */
+   
+   border-radius: 10px;
+   background-color: #ffe8cc;
+   color: #ff8b00;
+   font-size: 40px;
+   padding: 10px;
+}
+.db-card-body a {
+    text-decoration: none;
+}
+.db-card-body a .db-card-text h5{
+    font-size: 25px;
+    text-decoration: none;
+   
+}
+.db-card-body a .db-card-text  p{
+    font-size:20px;
+   color:   #ff8b00;
+
+}
+/* row 2 */
+.dashboard  .join-class-btn{
+    color: #ff5e14;
+    background-color: #FF5E141A ;
+}
+.dashboard  .join-class-btn:hover{
+    color: white;
+    background-color: #ff5e14;
+}
+
+
+
+
+
+
+
+
+/* teacher-box */
+
+.your-teacher-box{
+
+    background-color: white;
+    border-radius: 10px;
+    
+}
+.add-teacher h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+.add-teacher p{
+    font-size: 15px;
+}
+.your-teacher-box .sub-title-heading{
+    border-bottom: 1px  solid#1414131a;
+
+}
+.your-teacher-box .teacher-panel{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.teacher-panel .teacher-panel-header{
+    display: flex;
+    flex-direction: row;
+}
+.header-text h4{
+    font-weight: 500;
+}
+.header-text p{
+    font-weight: 300;
+
+}
+.teacher-panel-body {
+    display: flex;
+    flex-direction: column;
+}
+.teacher-panel-body ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.teacher-panel-body #course-price{
+    color: #ff5e14;
+    background-color: #FF5E141A ;
+    border-left: 1px solid ;
+    padding-left: 5px;
+    width: 50%;
+}
+
+
+/* model style */
+
+
+
+        .modal-dialog {
+            max-width: 400px;
+            margin: 1.75rem auto;
+        }
+        .modal-content {
+            border: 2px solid white;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+        .modal-header {
+            background-color: orangered;
+            color: #fff;
+            border-bottom: none;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .modal-footer {
+            border-top: none;
+            background-color: #f1f1f1;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .modal-body {
+            padding: 20px;
+        }
+        .modal-title {
+            margin: 0 auto;
+        }
+        .close {
+            color: #fff;
+            opacity: 1;
+        }
+        #result {
+            text-align: center;
+            margin-top: 30px;
+            color:orangered;
+            font-weight: bold;
+        }
+    
+/* model end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1030px){
+    .db-card-body h2{
+        margin-top: 10px;
+        height: 50%;
+       font-size: 20px;
+   
+       padding: 20px;
+    }
+    .db-card-body h2 i {
+        font-size: 2.0rem;
+   
+     
+      }
+      .db-card-body .db-card-title {
+        margin-top: 0px;
+      }
+      .db-card-body a .db-card-text h5 {
+        font-size: 1.4rem;
+
+      }
+      .db-card-body a .db-card-text p {
+        font-size: 1.2rem;
+      }
+
+      .your-teacher-box{
+          margin-top: 30px;
+      }
+  
+    
+}
+
+@media (max-width: 992px) {
+    .std-nav{
+    max-width: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #1b478c;
+    margin-right: 25px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    }
+    .std-nav a {
+        border: 3px solid rgb(255, 255, 255);
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-radius: 50px;
+      }
+    }
+    @media (max-width: 770px) {
+        .sidebar {
+          position: fixed;
+          width: 80px;
+          height: 100vh;
+          left: auto;
+          background-color: #1b478c;
+        }
+        .sidebar .navbar-nav a {
+          font-size: 0;
+        }
+        .sidebar .navbar-nav a i {
+          font-size: 30px;
+          margin: 0;
+        }
+        .sidebar .navbar-nav   .fa-sharp-duotone{
+            margin-left: 20px;
+        }
+        .dashboard.content {
+          overflow-x: hidden;
+          margin-left: 80px;
+          padding: 10px;
+        }
+        .db-card-body h2 {
+            margin-top: 10px;
+           height: 50%;
+          font-size: 20px;
+      
+          padding: 20px;
+        }
+        .db-card-body h2 i {
+          font-size: 2.0rem;
+       
+        }
+        .db-card-body .db-card-title {
+          margin-top: 0px;
+        }
+        .db-card-body a .db-card-text h5 {
+          font-size: 1.3rem;
+
+        }
+        .db-card-body a .db-card-text p {
+          font-size: 1.2rem;
+        }
+
+        .your-teacher-box{
+            margin-top: 30px;
+        }
+        .dashboard.content .part-2 {
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+      } 
+      
+      @media (max-width:575px) {
+
+        .sidebar .navbar-nav   .fa-sharp-duotone{
+           margin-left: 20px;
+       }
+       .dashboard.content {
+         overflow-x: hidden;
+         margin-left: 80px;
+         padding: 10px;
+       }
+       .db-card-body h2 {
+           margin-top: 10px;
+          height: 50%;
+         font-size: 10px;
+     
+         padding: 10px;
+       }
+       .db-card-body h2 i {
+         font-size: 2rem;
+      
+       }
+       .db-card-body .db-card-title {
+         margin-top: 0px;
+       }
+       .db-card-body a .db-card-text h5 {
+         font-size: 1.2rem;
+
+       }
+       .db-card-body a .db-card-text p {
+         font-size: 1rem;
+       }
+
+       .your-teacher-box{
+           margin-top: 30px;
+           padding: 0 ;
+       }
+       .dashboard.content .part-2 {
+           padding: 0px !important;
+           margin: 0px !important;
+       }
+     }
+
+  
+     @media (max-width: 479px) {
+        .header-text{
+          
+            padding:2px !important;
+            margin-left: 0px;
+      
+        }
+        .header-text h4{
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .header-text p{
+            font-size: 1rem;
+            font-weight: 300;
+        
+        }
+        .teacher-panel-header i{
+           font-size: 50px !important;
+          
+        }
+       .teacher-panel-body #course-price{
+            font-size: 0.7rem;
+
+        }
+        .addBtn{
+            font-size: 0.8rem !important;
+         
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TN-tutions</title>
+  <!-- icons -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css">
+  <!-- font aweasom -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  <!-- teachesrs about -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- student review -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+</head>
+<body>
+  <!-- header section start -->
+  <header> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " >
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+        <a class="navbar-brand mr-auto d-lg-block d-none" href="#"><img src="/images/others/titlelogo.png"
+            class=" title-logo" alt=""></a>
+        <ul class="navbar-nav  mt-2 mt-lg-0 text-center" >
+          <li class="nav-item m-1 active">
+            <div class="btn-group  p-0 col-12">
+              <button type="button" class="btn nav-buttons w-100"style=" "> Home</button>
+            </div>
+          </li>
+          <li class="nav-item p-0 m-1 ">
+            <div class="btn-group p-0 col-12">
+              <button type="button" class="btn btn-outline-none w-100 dropdown-toggle nav-buttons"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Tuition</button>
+              <span class="sr-only">Toggle Dropdown</span>
+              <div class="dropdown-menu  col-8">
+                <a class="dropdown-item text-center " id="demo1" th:href="@{/register}">School</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">College</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item m-1">
+            <div class="btn-group p-0 col-12">
+              <button type="button" class="btn btn-outline-none w-100 dropdown-toggle nav-buttons"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Curriculams</button>
+              <span class="sr-only">Toggle Dropdown</span>
+              <div class="dropdown-menu col-8">
+                <a class="dropdown-item text-center" th:href="@{/register}">Dance</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Singing</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Guitar</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Piano</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">yoga</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Painting</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item m-1 ">
+            <div class="btn-group p-0 col-12">
+              <button type="button" class="btn btn-outline-none   dropdown-toggle nav-buttons" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Languages</button>
+              <span class="sr-only">Toggle Dropdown</span>
+              <div class="dropdown-menu col-8">
+                <a class="dropdown-item text-center" th:href="@{/register}">English</a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Hindi</a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Tamil</a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Telugu</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Malayalam</a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item text-center" th:href="@{/register}">Sanskrit</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item m-1 active">
+            <div class="btn-group p-0 col-12">
+              <a type="button" class="btn  nav-buttons" style="background-color: orangered; color: white;"
+              th:href="@{/login}">
+                Login</a>
+            </div>
+          </li>
+          <li class="nav-item m-1">
+            <div class="btn-group p-0 col-12">
+              <a type="button" class="btn btn-outline-none w-100  nav-buttons"th:href="@{/register}"
+                >Registered</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- header section  end ------------------------------------------------------------------------------>
+
+  <div class="container-fluid banner-container">
+    <div class="row slide mt-5 ">
+      <div class="col-lg-12 col-12 ">
+        <div class="carousel slide" id="mycarousel" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-items">
+              <div class="carousel-item ">
+                <img class="d-lg-block d-md-block d-sm-none w-100 d-none" src="../images/slider/img1.png"
+                  alt="First slide">
+                <img class="d-lg-none d-sm-none h-50 " src="../images/slider/mb-2.png" alt="">
+              </div>
+              <div class="carousel-item active">
+                <img class="d-lg-block d-md-block d-sm-block w-100 d-none" src="../images/slider/img2.png"
+                  alt="Second slide">
+                <img class="d-lg-none d-sm-none  h-80" src="../images/slider/mb-3.png" alt="">
+              </div>
+              <div class="carousel-item ">
+                <img class="d-lg-block d-md-block d-sm-block w-100 d-none" src="../images/slider/img3.png"
+                  alt="Third slide">
+                <img class="d-lg-none d-sm-none h-80" src="./images/slider/mb-4.png" alt="">
+              </div>
+              <div class="carousel-item ">
+                <img class="d-lg-block d-md-block d-sm-block w-100 d-none" src="../images/slider/img2.png"
+                  alt="Second slide">
+                <img class="d-lg-none d-sm-none h-80" src="./images/slider/mb-5.png" alt="">
+              </div>
+              <div class="carousel-item ">
+                <!-- <div class="carousel-caption d-none d-md-block"><h4>hello </h4></div> -->
+                <img class="d-lg-block d-md-block d-sm-block w-100 d-none" src="../images/slider/img3.png"
+                  alt="First slide">
+                <img class="d-lg-none d-sm-none h-80" src="../images/slider/mb-2.png" alt="">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -----------------------------------------header end -->
+  <!-- popular courses start------------------------------------ -->
+  <div class="container courses-container ">
+    <div class="courses-box ">
+      <h2 class="text-center">Popular Courses</h2>
+      <div class="row row-courses">
+        <div class="col-lg-3 col-md-6 col-12 course-items">
+          <a href="#" style="background-color: #FDFD96">
+            <h3>Short Term Courses</h3>
+            <img src="../images/courses img/course-item-1.png" alt="Course 2">
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 course-items">
+          <a href="#" style="background-color:#FF5349">
+            <h3>Language Cources</h3>
+            <img src="../images/courses img/course-item-2.png" alt="Course 2">
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 course-items">
+          <a href="#" style="background-color: #50C878">
+            <h3>Coding Classes</h3>
+            <img src="../images/courses img/course-item-3.png" alt="Course 3">
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 course-items">
+          <a href="#" style="background-color: #50A0C8">
+            <h3>School Classes</h3>
+            <img src="../images/courses img/course-item-4.png" alt="Course 4">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about start -->
+  <!-- about section -->
+  <div class="container about-container">
+    <div class="row ">
+      <div class="col-lg-7">
+        <div class="main-about-img ">
+          <img src="../images/about img/about-img-1.png" alt="" class="about-img-one ">
+        </div>
+        <div class="about-img-box shadow">
+          <div class="about-img-box-two">
+            <img src="../images/about img/about-img-2.png" alt="about-img-2" class="img-fluid about-img-two">
+            <img src="../images/about img/play-btn.gif" alt="play-icon" class="img-fluid play-button">
+          </div>
+          <ul class="list-inline m-0 p-0 mt-3 process-list">
+            <li class="one mb-2"></li>
+            <li class="two mb-2"></li>
+            <li class="three "></li>
+          </ul>
+        </div>
+        <div class="about-img-content shadow">
+          <span>
+            <img src="../images/about img/add-user.svg" alt="add-user" class="img-fluid">
+          </span>
+          <div>
+            <h2 class="mb-0">20K+</h2>
+            <p class="mb-0">Enrolled Learners</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 about-right  ">
+        <h4>About Us</h4>
+        <h2>Tamilnadhu's best <span>online tuition </span>website for quality education</h2>
+        <p>We are committed to providing personalised online classes that cater to the unique learning needs of each
+          student.</p>
+        <ul>
+          <li>Flexible Timings</li>
+          <li>1-on-1 Live Tuition</li>
+          <li>Expert Trainers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- about end -->
+  <!-- count  start======================================================================== -->
+  <div class="container count-container ">
+    <div class="row row-count ">
+      <div class="col-lg-3 col-6">
+        <div class="count-box p-3">
+          <h3 class="mb-0 c0" style="color:rgb(255, 200, 52);">5000+</h3>
+          <p class="mb-0">HAPPY STUDENTS</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="count-box  p-3 ">
+          <h3 class="mb-0 c1" style="color:rgb(248, 119, 30)">10K+</h3>
+          <p class="mb-0">CLASS COMPLETED</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="count-box  p-3">
+          <h3 class="mb-0 c2 " style="color: rgb(19, 245, 154)">100%</h3>
+          <p class="mb-0">SATISFACTION</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6 ">
+        <div class="count-box  p-3 ">
+          <h3 class="mb-0 c3 " style="color:rgb(99, 170, 255);">1334</h3>
+          <p class="mb-0">CERTIFIED TUTORS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- count endd -->
+  <!-- student-review start -->
+  <div class="container student-review-container ">
+    <div class="row justify-content-center ">
+      <div class="col-lg-5 ">
+        <div class="left-review align-center">
+          <h4>STUDENT-REVIEWS</h4>
+          <h2>Happy Students, Successful Futures</h2>
+          <p>Our students are very happy about our exceptional teachers and user-friendly platform,
+            making learning enjoyable and effective.</p>
+          <div class="indicater-review">
+            <a class="carousel-control-prev review-prev" href="#student-reviews" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next review-nxt" href="#student-reviews" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="right-review ">
+          <div class="col-lg-12 col-12 ">
+            <div class="carousel slide" id="student-reviews" data-ride="carousel">
+              <div class="carousel-inner align-items-center">
+                <div class="carousel-items">
+                  <div class="carousel-item ">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                          <div class="review-1">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="review-2">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item active">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                          <div class="review-1">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="review-2">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item ">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                          <div class="review-1">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="review-2">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item ">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                          <div class="review-1">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="review-2">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item ">
+                    <!-- <div class="carousel-caption d-none d-md-block"><h4>hello </h4></div> -->
+                    <div class="container">
+                      <div class="row justify-content-center ">
+                        <div class="col-lg-5">
+                          <div class="review-1">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="review-2">
+                            <div class="std-review ">
+                              <img src="../images/others/default_image.jpg" alt="" class="logo-profile">
+                              <p class="text-center">Divya ma'am is so kind and cooperative. Overall am satisfied in
+                                teaching maths...</p>
+                              <h5 class="blockquote">Read more</h5>
+                              <img src="../images/others/29Y_6di5usrkc5p2qc1l.jpg" alt="" class="review-star">
+                              <h3>harish</h3>
+                              <h5>Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- student-review end -->
+  <!-- courses-kids start-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Courses for <span style="color: orangered;">kids</span></h1>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="kid-courses " style="background-color: rgb(255, 249, 232);">
+          <a style="color: rgb(255, 200, 52);" href=""><img src="../images/courses-2-img/abacus.png" alt="">Abacus</a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="kid-courses" style="background-color: rgb(238, 231, 252);">
+          <a href="" style="color:rgb(52, 157, 255) ;"><img src="../images/courses-2-img/vedic-maths.png" alt="">Vedic
+            Maths</a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="kid-courses" style="background-color: rgb(227, 253, 244);">
+          <a href="" style="color:  rgb(19, 245, 154);"><img src="../images/courses-2-img/public-speaking.png"
+              alt="">Public Speaking</a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="kid-courses" style="background-color: rgb(238, 231, 252);">
+          <a href="" style="color: rgb(105, 37, 230);"><img src="../images/courses-2-img/phonics-classes.png"
+              alt="">Phonics Classes</a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="kid-courses" style="background-color:rgb(250, 236, 232)">
+          <a href="" style="color:rgb(255, 138, 74)"><img src="../images/courses-2-img/english-grammar.png"
+              alt="">English Grammer</a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="kid-courses" style="background-color:rgba(255, 249, 232);">
+          <a href="" style="color: rgb(255, 200, 52);"><img src="../images/courses-2-img/personality-development.png"
+              alt="">Personality Development</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--courses-kids start-->
+  <!-- book demo class start -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 ">
+        <div class="demo-left">
+          <h2>Book a <span style="color: orangered;">Free Demo</span> Session Now</h2>
+          <a th:href="@{/register}"><button class="btn btn-warning book-demo-btn ">Book a free demo</button></a>
+
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="deno-right">
+          <img src="../images/courses-2-img/home-free-demo.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- book demo class end -->
+  <!-- courses-2 start -->
+  <div class="container">
+    <div class="row ">
+      <h2 class="col-lg-12 p-3">Discover Available <span style="color: orangered;">Courses</span></h2>
+      <div class="col-lg-12 d-lg-flex flex-row justify-content-between">
+        <div class="col-lg-6 col-12 col-md-10 ">
+          <div class="courses-2-box1 p-3  d-flex flex-row mt-3">
+            <div class="courses-2 col-lg-7">
+              <h6 style="color: rgb(252, 186, 7);">Basics to advance</h6>
+              <h3>Language</h3>
+              <p>Learn a forein language by online native teacher and increase your employability.</p>
+              <a th:href="@{/register}"><button type="button" class="btn btn-warning">Explore Now</button></a>
+            </div>
+            <div class="courses-2-image  col-lg-5">
+              <img src="../images/courses-2-img/disc-content-3.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 col-md-10">
+          <div class="courses-2-box-2  p-3  d-flex flex-row mt-3">
+            <div class="courses-2 col-lg-7">
+              <h6 style="color:rgb(248, 125, 39)">Basics to advance</h6>
+              <h3>Classes</h3>
+              <p>Learn Form best teacher from home at anytime at affordable prices.</p>
+             <a  th:href="@{/register}"> <button type="button" class="btn btn-danger">Explore Now</button></a>
+            </div>
+            <div class="courses-2-image  col-lg-5">
+              <img src="../images/courses-2-img/disc-content-4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 d-lg-flex flex-row  justify-content-between">
+        <div class="col-lg-6 col-12 col-md-10  ">
+          <div class="courses-2-box-3 p-3  d-flex flex-row mt-3">
+            <div class="courses-2 col-lg-7">
+              <h6 style="color: rgb(2, 230, 137);">Basics to advance</h6>
+              <h3>Language</h3>
+              <p>Learn a forein language by online native teacher and increase your employability.</p>
+              <a th:href="@{/register}" ><button type="button" class="btn btn-success">Explore Now</button></a>
+            </div>
+            <div class="courses-2-image  col-lg-5">
+              <img src="../images/courses-2-img/disc-content-1.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 col-md-10">
+          <div class="courses-2-box-4  p-3  d-flex flex-row mt-3">
+            <div class="courses-2 col-lg-7">
+              <h6 style="color:rgb(49, 96, 253)">Basics to advance</h6>
+              <h3>Classes</h3>
+              <p>Learn Form best teacher from home at anytime at affordable prices.</p>
+              <a th:href="@{/register}"><button type="button" class="btn btn-primary">Explore Now</button></a>
+            </div>
+            <div class="courses-2-image  col-lg-5">
+              <img src="../images/courses-2-img/disc-content-2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- courses-2 end -->
+  <!-- serice start -->
+  <div class="container mt-5">
+    <div class="row align-items-centre">
+      <div class=" col-12 col-lg-4 col-md-12 left-box">
+        <h3 class="title-heading">Online Learning With
+          <span>e-Tuitions</span>
+        </h3>
+        <p class="sub-text">We will connect you to your teachers &amp; peers. Let us tell you
+          what makes us one of the Best Online Tuition website.</p>
+      </div>
+      <!-- right box -->
+      <div class="col-lg-8 col-md-12 right-box">
+        <div class="row services-row">
+          <div class="col-lg-4 col-md-6 col-10">
+            <div class="services-box">
+              <div class="services-icon">
+                <img src="../images/service.pngs/classroom.png" alt="classroom" class="img-fluid">
+              </div>
+              <div class="services-content">
+                <h4>Classes for School &amp; College Students</h4>
+                <p>We offer online classes for students in school &amp; college.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-10">
+            <div class="services-box">
+              <div class="services-icon">
+                <img src="../images/service.pngs/free-demo-classes.png" alt="classroom" class="img-fluid">
+              </div>
+              <div class="services-content">
+                <h4>Book Demo Class</h4>
+                <p>Just choose your subject/ course & take a free trial class.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-10">
+            <div class="services-box">
+              <div class="services-icon">
+                <img src="../images/service.pngs/diverse-course.png" alt="classroom" class="img-fluid">
+              </div>
+              <div class="services-content">
+                <h4>Diverse Courses</h4>
+                <p>Coding, Foreign languages, Dance, Music. Take online classes for all.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-10">
+            <div class="services-box">
+              <div class="services-icon">
+                <img src="../images/service.pngs/experienced-teacher.png" alt="classroom" class="img-fluid">
+              </div>
+              <div class="services-content">
+                <h4>Experienced Teachers</h4>
+                <p>Take lessons from the Best Teachers in India.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-10">
+            <div class="services-box">
+              <div class="services-icon">
+                <img src="../images/service.pngs/student-result.png" alt="classroom" class="img-fluid">
+              </div>
+              <div class="services-content">
+                <h4>Student's Results</h4>
+                <p>Every student's results & reviews are important to us.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-10">
+            <div class="services-box">
+              <div class="services-icon">
+                <img src="../images/service.pngs/regional-languages.png" alt="classroom" class="img-fluid">
+              </div>
+              <div class="services-content">
+                <h4>Classes in Regional Language</h4>
+                <p>Find teachers who will teach you in your mother tongue.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- service end -->
+  <!-- teacher -->
+  <div class="container cta-100 mt-5 teacher-container ">
+    <div class="continer  ">
+      <div class="row blog  d-none d-lg-block">
+        <div class="col-md-9 col-lg-12">
+          <div id="blogCarousel" class="carousel slide container-blog p-5" data-ride="carousel">
+            <h1 class="teacher-headline">Our Dedicated <span>Online Teachers...</span></h1>
+            <div class="carousel-indicators">
+              <img src="../images/others/pre-button.png" alt="" data-target="#blogCarousel" data-slide-to="0"
+                class="active">
+              <img src="../images/others/next-button.png" alt="" data-target="#blogCarousel" data-slide-to="1">
+            </div>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-4 col-12">
+                    <div class="teacher-about ">
+                      <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                      <h2 class="teacher-name">Jeny</h2>
+                      <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                      <h5 class="text-center teacher-institute">Government Higher Secoundary School Elur</h5>
+                      <h2 class="teacher-exp">20 Years EXP</h2>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-12">
+                    <div class="teacher-about ">
+                      <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                      <h2 class="teacher-name">Jeny</h2>
+                      <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                      <h5 class="text-center teacher-institute">Government Higher Secoundary School Elur</h5>
+                      <h2 class="teacher-exp">20 Years EXP</h2>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-12">
+                    <div class="teacher-about ">
+                      <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                      <h2 class="teacher-name">Jeny</h2>
+                      <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                      <h5 class="text-center teacher-institute">Government Higher Secoundary School Elur</h5>
+                      <h2 class="teacher-exp">20 Years EXP</h2>
+                    </div>
+                  </div>
+                </div>
+                <!--.row-->
+              </div>
+              <!--.item-->
+              <div class="carousel-item ">
+                <div class="row">
+                  <div class="col-md-4 col-12">
+                    <div class="teacher-about ">
+                      <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                      <h2 class="teacher-name">Jeny</h2>
+                      <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                      <h5 class="text-center teacher-institute">Government Higher Secoundary School Elur</h5>
+                      <h2 class="teacher-exp">20 Years EXP</h2>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-12">
+                    <div class="teacher-about ">
+                      <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                      <h2 class="teacher-name">Jeny</h2>
+                      <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                      <h5 class="text-center teacher-institute">Government Higher Secoundary School Elur</h5>
+                      <h2 class="teacher-exp">20 Years EXP</h2>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="teacher-about ">
+                      <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                      <h2 class="teacher-name">Jeny</h2>
+                      <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                      <h5 class="text-center teacher-institute">Government Higher Secoundary School Elur</h5>
+                      <h2 class="teacher-exp">20 Years EXP</h2>
+                    </div>
+                  </div>
+                  <!--.row-->
+                </div>
+                <!--.item-->
+              </div>
+              <!--.carousel-inner-->
+            </div>
+            <!--.Carousel-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile view about teacher -->
+    <div class="container">
+      <div class="row d-lg-none justify-content-center">
+        <h1 class="teacher-headline">Our Dedicated <span>Online Teachers...</span></h1>
+        <div class="carousel slide mb-blog" id="teacher-mb" data-ride="carousel">
+          <div class="carousel-indicators teacher-mb-indicator">
+            <img src="../images/others/pre-button.png" alt="" data-target="#teacher-mb" data-slide-to="next"
+              class=" sr-only mr-3" aria-hidden="true">
+            <img src="../images/others/next-button.png" alt="" data-target="#teacher-mb" data-slide-to="prev"
+              class=" sr-only active" aria-hidden="true">
+          </div>
+          <div class="carousel-inner">
+            <!-- <a class="carousel-control-prev review-prev" href="#student-reviews" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a> -->
+            <div class="carousel-item active">
+              <div class="col-12">
+                <div class="teacher-about ">
+                  <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                  <h2 class="teacher-name">Jeny</h2>
+                  <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                  <h4 class="text-center teacher-institute">Government Higher Secoundary School Elur</h4>
+                  <h2 class="teacher-exp">20 Years EXP</h2>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-12">
+                <div class="teacher-about ">
+                  <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                  <h2 class="teacher-name">inba</h2>
+                  <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                  <h4 class="text-center teacher-institute">Government Higher Secoundary School Elur</h4>
+                  <h2 class="teacher-exp">20 Years EXP</h2>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-12">
+                <div class="teacher-about ">
+                  <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                  <h2 class="teacher-name">hari</h2>
+                  <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                  <h4 class="text-center teacher-institute">Government Higher Secoundary School Elur</h4>
+                  <h2 class="teacher-exp">20 Years EXP</h2>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-12">
+                <div class="teacher-about ">
+                  <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                  <h2 class="teacher-name">hari</h2>
+                  <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                  <h4 class="text-center teacher-institute">Government Higher Secoundary School Elur</h4>
+                  <h2 class="teacher-exp">20 Years EXP</h2>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-12">
+                <div class="teacher-about ">
+                  <img src="../images/teacher-img/jeny.jpeg" alt="teacher" class="teacher-img">
+                  <h2 class="teacher-name">hari</h2>
+                  <h5 class="teacher-dipartment">M.Sc Mathematics</h5>
+                  <h4 class="text-center teacher-institute">Government Higher Secoundary School Elur</h4>
+                  <h2 class="teacher-exp">20 Years EXP</h2>
+                </div>
+              </div>
+            </div>
+            <!-- items -->
+          </div>
+          <!-- inner -->
+        </div>
+        <!-- carousel -->
+      </div>
+    </div>
+  </div>
+  <!-- contact us start -->
+  <div class="container contact-container p-3 mt-5">
+    <div class="row">
+      <form class="col-lg-7 col-md-6">
+        <div class="form-group row">
+          <label for="inputEmail1" class="col-sm-2 col-form-label ">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control " id="inputEmail1" placeholder="You123@gmail.com">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="mobileNumber" class="col-sm-2 col-form-label">Mobile</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control ml-0" id="mobileNumber" placeholder="Mobile Number">
+          </div>
+        </div>
+        <fieldset class="form-group ">
+          <div class="row">
+            <legend class="col-form-label col-sm-3 pt-0">Are You</legend>
+            <div class="col-sm-9">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Teacher
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Student
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea class="form-control" id="message" rows="2" placeholder="Enter your message here"></textarea>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+      <div class="col-lg-5 col-md-6">
+        <div class="contact-image-container">
+          <img src="../images/others/contact-img.jfif" alt="Sample Image">
+          <div class="overlay contact">
+            <h2 style="color: #FF5349;font-weight: 500;">CONTACT US</h2>
+            <p id="para">We are committed to delivering the best solutions tailored to your requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- contact us end -->
+  <!--.contact us ========================================================== -->
+  <div class="container ">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Media</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="bi bi-instagram"></i> Instagram</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="bi bi-facebook"></i> Facebook</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="bi bi-twitter"></i> Twitter</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="bi bi-linkedin"></i> Linkedin</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="bi bi-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 m">
+              <label for="newsletter1" class="visually-hidden"></label>
+              <input id="newsletter1" type="text" class="form-control mt-2" placeholder="Email address">
+              <button class="btn btn-warning mt-2" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2022 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <script src="./script.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
